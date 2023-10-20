@@ -1,0 +1,246 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial';
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #000;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.navelement {
+    margin: 0 0 0 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.websitename {
+    font-weight: 600;
+    margin: 0 0 0 10%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0 1rem 0;
+}
+
+.inactive {
+    color: #999;
+}
+
+.inactive:hover, .active:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 50px;
+    transition: all 0.2s ease;
+}
+
+.AlbumArt {
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease;
+}
+
+.trackcount {
+    margin-top: 10px;
+    color: #555;
+    font-family: 'Arial';
+    font-size: 0.7rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.right {
+    margin-left: 30px;
+    width: 100%;
+}
+
+.play, .shuffle {
+    background-color: #fa2c49;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: 'Arial';
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5px;
+    transition: all 0.2s ease;
+}
+
+.play:hover, .shuffle:hover {
+    background-color: #fff;
+    color: #fa2c49;
+    border: 2px solid #fa2c49;
+}
+
+.tracks {
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.track, .trackbis {
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    font-family: 'Arial';
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.track {
+    background-color: #ddd;
+}
+
+.trackbis {
+    background-color: #fff;
+}
+
+.trackbtn {
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial';
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.duration {
+    font-family: 'Arial';
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    transition: all 0.2s ease;
+    right: 10px;
+    position: absolute;
+}
+
+/* Responsive */
+
+/* Tablet */
+@media screen and (max-height: 500px) and (min-width: 700px) {
+    .AlbumArt {
+        width: 100px;
+        height: 100px;
+    }
+    .duration {
+        font-size: 0.8rem;
+    }
+    .trackbtn {
+        font-size: 0.8rem;
+    }
+    .play, .shuffle {
+        font-size: 0.8rem;
+    }
+    .content {
+        width: 98%;
+        margin-top: 25px;
+    }
+    .trackcount {
+        font-size: 0.5rem;
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+    .duration {
+        font-size: 0.7rem;
+    }
+    .trackbtn {
+        font-size: 0.7rem;
+    }
+    .AlbumArt {
+        width: 150px;
+        height: 150px;
+        border-radius: 5%;
+    }
+    .play, .shuffle {
+        font-size: 0.7rem;
+    }
+    .content {
+        width: 90%;
+        margin-top: 25px;
+    }
+    .trackcount {
+        font-size: 0.5rem;
+    }
+}
+
+/* Little Mobile */
+@media screen and (max-width: 700px) and (max-height: 500px) {
+    .AlbumArt {
+        width: 100px;
+        height: 100px;
+        border-radius: 5%;
+    }
+}
